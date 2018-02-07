@@ -28,5 +28,10 @@ pipeline {
                 sh 'echo "docker ..."'
             }
         }
+        stage("Docker image"){
+            steps{
+                sh './genImages.sh'
+            }
+        }
     }
 }
