@@ -22,9 +22,9 @@ pipeline {
         stage('Build') {
             steps{
                 sh 'echo "clean..."'
-                ./gradlew build
+                sh ./gradlew build
                 sh 'echo "building..."'
-                ls -l build/libs
+                sh ls -l build/libs
                 sh 'echo "docker ..."'
             }
         }
